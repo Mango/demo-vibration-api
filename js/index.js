@@ -1,6 +1,6 @@
 (function(window) {
 
-  var hasVibration = 'vibration' in navigator;
+  var hasVibration = 'vibrate' in navigator;
   var container = document.getElementById('demoPayment');
   var successMsg = document.getElementById('msg-success');
 
