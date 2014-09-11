@@ -3,6 +3,9 @@
   var hasVibration = 'vibrate' in navigator;
   var container = document.getElementById('demoPayment');
   var successMsg = document.getElementById('msg-success');
+  var email = document.getElementById('df-email');
+  var amount = document.getElementById('df-amount');
+  var form = document.getElementById('d-form');
 
   function showError() {
     container.classList.add('shake');
@@ -16,10 +19,10 @@
     }, 200);
   }
 
-  document.getElementById('df-email').addEventListener('invalid', showError);
-  document.getElementById('df-amount').addEventListener('invalid', showError);
+  email.addEventListener('invalid', showError);
+  amount.addEventListener('invalid', showError);
 
-  document.getElementById('d-form').addEventListener('submit', function(eve) {
+  form.addEventListener('submit', function(eve) {
     eve.preventDefault();
     this.setAttribute('hidden', 'hidden');
     successMsg.removeAttribute('hidden');
