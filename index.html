@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimal-ui">
+    <title>Vibration Demo</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/index.css">
+  <body>
+
+    <div id="demoPaymentHolder">
+      <div id="demoPayment">
+
+        <header id="d-header">
+          <img  id="logo" src="assets/logo.png" alt="Marca">
+          <h1>Crucero</h1>
+          <h2>Formulario de Pago</h2>
+        </header>
+
+        <form id="d-form" action="/server" method="POST">
+          <fieldset>
+            <div class="fieldLine">
+              <label for="df-email">E-mail</label>
+              <input type="email" id="df-email" placeholder="E-mail" name="email" autocomplete="off" required>
+            </div>
+            <div class="fieldLine">
+              <label for="df-amount">Monto</label>
+              <input type="number" id="df-amount" placeholder="Monto" name="amount" autocomplete="off" required>
+            </div>
+          </fieldset>
+          <div id="d-submit">
+            <button type="submit">Pagar</button>
+          </div>
+        </form>
+
+        <div class="msg" id="msg-success" hidden>
+          <p>¡Tu compra se ha realizado con éxito!</p>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="js/index.js" async></script>
+  </body>
+</html>
